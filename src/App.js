@@ -1,11 +1,14 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
+import Banner from './components/banner/Banner';
 
 function App() {
   return (
     <div className="App">
-    <h1>Project Dionysus</h1>
-    <NavBar />
+      <section className='header'>
+        <NavBar />
+        <Banner />
+      </section>
     </div>
   );
 }

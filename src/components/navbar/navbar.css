@@ -1,0 +1,26 @@
+.navbar{
+    margin: auto;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+li button{
+    width: 100px;
+}
+.mixin-set [data-augmented-ui] {
+    width: 1000px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom right, rgb(16, 52, 255), rgb(193, 26, 218));
+  }

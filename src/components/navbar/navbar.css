@@ -6,6 +6,7 @@
     align-items: center;
 }
 ul{
+    width: 700px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;

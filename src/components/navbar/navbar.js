@@ -7,9 +7,6 @@ const NavBar = () => {
             <nav data-augmented-ui="inlay tl-2-clip-x br-2-clip-x" className='navbar'>
                 <ul>
                     <li>
-                        <button>Home</button>
-                    </li>
-                    <li>
                         <button>About</button>
                     </li>
                     <li>

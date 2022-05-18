@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fugaz+One&family=Josefin+Sans:wght@600&family=Open+Sans:wght@300&family=Roboto+Mono:wght@500&family=Roboto:wght@300&family=Stalinist+One&display=swap');
 .App {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .App-logo {

@@ -1,3 +1,7 @@
-.item{
-    position: fixed;
+.card{
+    background-color: black;
+}
+.card-item img{
+    width: 100%;
+    height: auto;
 }

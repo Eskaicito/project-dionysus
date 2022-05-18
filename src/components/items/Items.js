@@ -1,13 +1,21 @@
 import './Items.css'
+import '@mui/material'
+import { CardContent, Card} from '@mui/material'
 
-const Items = () =>{
+const Items = ({image, desc}) =>{
     return(
-        <div className='item'>
-            <div>
+        <>
+        <Card style={{backgroundColor: "transparent", color: "white"}}>
+            <CardContent>
+            <div className='card-item'>
+                <div>
+                    <img src={`./${image}`} />
+                </div>
+                <span>{desc}</span>
             </div>
-            <p>ABOUT</p>
-            <span>know the secrets</span>
-        </div>
+            </CardContent>
+        </Card>
+        </>
     )
 }
 export default Items

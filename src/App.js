@@ -1,14 +1,14 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
 import Banner from './components/banner/Banner';
+import Scanlines from './components/scanlines/Scanlines';
 
 function App() {
   return (
     <div className="App">
-      <section className='header'>
-        <NavBar />
-        <Banner />
-      </section>
+      <Scanlines />
+      <NavBar />
+      <Banner />
     </div>
   );
 }

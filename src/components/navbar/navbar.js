@@ -13,7 +13,7 @@ const NavBar = () => {
                         <button>Articles</button>
                     </li>
                     <li>
-                        <button>Shadow Gallery</button>
+                        <button>Gallery</button>
                     </li>
                 </ul>
             </nav>

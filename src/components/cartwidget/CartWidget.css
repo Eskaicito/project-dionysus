@@ -1,0 +1,10 @@
+.cart{
+    width: 50px;
+    height: auto;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+.cart img{
+    width: 100%;
+}

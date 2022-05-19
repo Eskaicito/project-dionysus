@@ -1,5 +1,5 @@
 import './ItemsList.css'
-import Items from "../items/Items";
+import Items from "../Items/Items";
 import '@mui/material';
 import { Container } from "@mui/system";
 import { Grid } from "@mui/material";

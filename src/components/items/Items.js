@@ -9,7 +9,7 @@ const Items = ({image, desc}) =>{
             <CardContent>
             <div className='card-item'>
                 <div>
-                    <img src={`./${image}`} />
+                    <img src={`./${image}`} alt='card-image'/>
                 </div>
                 <span>{desc}</span>
             </div>

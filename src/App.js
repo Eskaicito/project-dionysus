@@ -1,7 +1,7 @@
 import './App.css';
-import NavBar from './components/navbar/NavBar';
-import Scanlines from './components/scanlines/Scanlines';
-import ItemsList from './components/itemslist/ItemsList';
+import NavBar from './components/Navbar/NavBar';
+import Scanlines from './components/Scanlines/Scanlines';
+import ItemsList from './components/Itemslist/ItemsList';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import 'augmented-ui'
 import './NavBar.css'
-import Cart from '../cartwidget/CartWidget'
+import Cart from '../CartWidget/CartWidget'
 
 const NavBar = () => {
     return(

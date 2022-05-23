@@ -9,13 +9,13 @@ const ItemsList = () =>{
         <Container>
             <Grid className='items-list' container>
                 <Grid item md={3}>
-                    <Items image='statue.gif' desc='Discover the Dionysian Misteries' />
+                    <Items image='statue.gif' desc='Dionysus Bust' stock={6} />
                 </Grid>
                 <Grid item md={3}>
-                    <Items image='mac.gif' desc='Unveil the sacred texts'/>
+                    <Items image='mac.gif' desc='Old Macintosh'  stock={8}/>
                 </Grid>
                 <Grid item md={3}>
-                    <Items image='arcade.gif' desc='Embrace the symbols'/>
+                    <Items image='arcade.gif' desc='Arcade Machine' stock={4}/>
                 </Grid>
             </Grid>
         </Container>

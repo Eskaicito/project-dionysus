@@ -1,6 +1,6 @@
 import './Items.css'
 import '@mui/material'
-import { CardContent, Card } from '@mui/material'
+import { CardContent, Card, Button} from '@mui/material'
 import { useState } from 'react'
 
 const Items = ({ image, desc, stock }) => {
@@ -28,6 +28,7 @@ const Items = ({ image, desc, stock }) => {
                             <button onClick={substractItem}>-</button>
                             <p>{counter}</p>
                             <button onClick={addItem}>+</button>
+                            <button>BUY</button>
                         </div>
                         <span>{desc}</span>
                     </div>

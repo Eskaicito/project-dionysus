@@ -45,6 +45,7 @@ const ItemsListContainer = () =>{
 
     return(
         <>
+        {console.log(productos)}
         <Container>
             <ItemsList productos = {productos}/>
         </Container>

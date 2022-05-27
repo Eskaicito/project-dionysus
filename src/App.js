@@ -1,16 +1,17 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Scanlines from './components/Scanlines/Scanlines';
-import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer';
-import ItemsDetailContainer from './components/ItemsDetailContainer/ItemsDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Scanlines />
-      <ItemsListContainer />
-      <ItemsDetailContainer />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -3,29 +3,10 @@ import ItemsList from '../Itemslist/ItemsList'
 import '@mui/material';
 import { Container } from "@mui/system";
 import { useState, useEffect } from 'react';
+import products from '../../utils/ProductsMock';
 
 const ItemsListContainer = () =>{
     const [productos, setProductos] = useState([])
-    const products = [
-        {
-            image: "statue.gif",
-            desc: "Dionysus Bust",
-            id: "1",
-            stock: "6",
-        },
-        {
-            image: "mac.gif",
-            desc: "Old Macintosh",
-            id: "2",
-            stock: "8",
-        },
-        {
-            image: "arcade.gif",
-            desc: "Arcade Machine",
-            id: "3",
-            stock: "4",
-        },
-    ];
     const getProductos = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {

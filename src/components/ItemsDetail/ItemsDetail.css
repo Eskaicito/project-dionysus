@@ -1,0 +1,23 @@
+.bust {
+    display: block;
+    float: left;
+}
+
+.detailList {
+    height: 100%;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.detail {
+    color: white;
+
+}
+
+.bust img {
+    width: 100%;
+    height: auto;
+}

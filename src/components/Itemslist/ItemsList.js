@@ -12,7 +12,7 @@ const ItemsList = ({productos}) => {
                             const {image, desc, id, stock} = producto;
                             return (
                                 <Grid item md={3} key = {id}>
-                                    <Items image={image} desc={desc} stock={stock} />
+                                    <Items image={image} desc={desc} stock={stock} id={id} />
                                 </Grid>
                             )
                         })

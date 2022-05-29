@@ -24,6 +24,7 @@ const bust = {
     desc: "Dionysus Bust",
     id: "1",
     stock: "6",
+    cont: "A bust from the God of Wine, Creativity and Ecstasy. Only those who let themselves be enchanted by its mysteries know the truth beyond their eyes"
 }
 const mac = {
 

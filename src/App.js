@@ -6,6 +6,7 @@ import Products from './pages/Products';
 import NotFound from './pages/NotFound';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
+import Detail from './pages/Detail';
 function App() {
   return (
     <div className="App">
@@ -13,8 +14,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path= '/products' element={<About />} />
-          <Route exact path= '/about' element={<Products />}/>
+          <Route exact path= '/about' element={<About />} />
+          <Route exact path= '/products' element={<Products />}/>
+          <Route exact path= '/products/:id' element={<Detail />}/>
           <Route exact path= '/gallery' element={<Gallery />}/>
           <Route exact path= '*' element={<NotFound />} />
         </Routes>

@@ -9,7 +9,7 @@ ul{
     width: 700px;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 li{
     margin-left: 20px;
@@ -30,3 +30,7 @@ li button{
     margin-right: auto;
     background: linear-gradient(to bottom right, rgb(233, 2, 254), rgb(203, 7, 7));
   }
+img{
+    width: 10vw;
+    height: auto;
+}

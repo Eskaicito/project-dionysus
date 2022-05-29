@@ -1,6 +1,7 @@
 import 'augmented-ui'
 import './NavBar.css'
 import Cart from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -8,13 +9,24 @@ const NavBar = () => {
             <nav data-augmented-ui="inlay tl-2-clip-x br-2-clip-x" className='navbar'>
                 <ul>
                     <li>
-                        <button>About</button>
+                        <Link to={'/'}>
+                            <img src='dionysus_name.png'/>
+                        </Link>
                     </li>
                     <li>
-                        <button>Products</button>
+                        <Link to={'/about'}>
+                            <button>About</button>
+                        </Link>
                     </li>
                     <li>
-                        <button>Gallery</button>
+                        <Link to={'/products'}>
+                            <button>Products</button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/gallery'}>
+                            <button>Gallery</button>
+                        </Link>
                     </li>
                 </ul>
                 <Cart />

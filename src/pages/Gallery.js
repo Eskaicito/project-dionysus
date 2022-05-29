@@ -3,7 +3,7 @@ import Scanlines from "../components/Scanlines/Scanlines";
 const Gallery = () => {
     return (
         <>
-            <h1>GALLERY</h1>
+            <h1 style={{color: "white"}}>GALLERY</h1>
             <Scanlines />
         </>
     )

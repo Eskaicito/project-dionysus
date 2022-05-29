@@ -3,7 +3,7 @@ import Scanlines from "../components/Scanlines/Scanlines";
 const About = () => {
     return (
         <>
-            <h1>SOBRE EL PROYECTO</h1>
+            <h1 style={{color: "white"}}>About the project</h1>
             <Scanlines />
         </>
     )

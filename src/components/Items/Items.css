@@ -5,3 +5,11 @@
     width: 100%;
     height: auto;
 }
+.card-item button{
+    margin-left: 5px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    text-decoration: none;
+}

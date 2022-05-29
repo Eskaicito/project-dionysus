@@ -1,33 +1,40 @@
 import './ItemsDetailContainer.css'
 import ItemsDetail from "../ItemsDetail/ItemsDetail";
-import { bust } from "../../utils/ProductsMock";
+import productos from "../../utils/ProductsMock";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/system";
+import { useParams } from 'react-router-dom';
 
 
 const ItemsDetailContainer = () => {
-    const [products, setProducts] = useState({})
-    const getItem = () => {
+    const [product, setProduct] = useState({})
+    const { id } = useParams()
+
+    /*const getItem = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(bust)
             }, 1000);
         });
-    }
+    }*/
     useEffect(() => {
-        getItem()
+        /*getItem()
             .then((Response) => {
                 setProducts(Response)
-            })
-
+            })*/
+        setProduct(productId)
     }, [])
+
+    const productId = productos.find((product) => {
+        return product.id == id
+    })
 
 
     return (
         <>
-        <Container>
-            <ItemsDetail data={products} />
-        </Container>
+            <Container>
+                <ItemsDetail data={product} />
+            </Container>
         </>
     )
 }

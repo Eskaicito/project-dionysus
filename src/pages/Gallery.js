@@ -1,6 +1,11 @@
-const Gallery = () =>{
+import Scanlines from "../components/Scanlines/Scanlines";
+
+const Gallery = () => {
     return (
-        <h1>GALLERY</h1>
+        <>
+            <h1>GALLERY</h1>
+            <Scanlines />
+        </>
     )
 }
 export default Gallery;

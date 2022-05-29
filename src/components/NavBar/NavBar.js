@@ -3,7 +3,7 @@ import './NavBar.css'
 import Cart from '../CartWidget/CartWidget'
 
 const NavBar = () => {
-    return(
+    return (
         <div className='mixin-set'>
             <nav data-augmented-ui="inlay tl-2-clip-x br-2-clip-x" className='navbar'>
                 <ul>
@@ -11,16 +11,16 @@ const NavBar = () => {
                         <button>About</button>
                     </li>
                     <li>
-                        <button>Articles</button>
+                        <button>Products</button>
                     </li>
                     <li>
                         <button>Gallery</button>
                     </li>
                 </ul>
-            <Cart />
+                <Cart />
             </nav>
         </div>
     )
-} 
+}
 
 export default NavBar

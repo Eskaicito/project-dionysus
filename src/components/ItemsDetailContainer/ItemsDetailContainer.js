@@ -10,19 +10,18 @@ const ItemsDetailContainer = () => {
     const [product, setProduct] = useState({})
     const { id } = useParams()
 
-    /*const getItem = () => {
+    const getItem = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(bust)
+                resolve(product)
             }, 1000);
         });
-    }*/
+    }
     useEffect(() => {
-        /*getItem()
+        getItem()
             .then((Response) => {
-                setProducts(Response)
-            })*/
-        setProduct(productId)
+                setProduct(productId)
+            })
     }, [])
 
     const productId = productos.find((product) => {

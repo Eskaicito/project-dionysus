@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
         <div className='mixin-set'>
-            <nav data-augmented-ui="inlay tl-2-clip-x br-2-clip-x" className='navbar'>
+            <nav data-augmented-ui="tl-2-clip-x br-2-clip-x" className='navbar'>
                 <ul>
                     <li>
                         <Link to={'/'}>

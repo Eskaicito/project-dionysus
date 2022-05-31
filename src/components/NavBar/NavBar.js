@@ -10,7 +10,7 @@ const NavBar = () => {
                 <ul>
                     <li>
                         <Link to={'/'}>
-                            <img src='dionysus_name.png'/>
+                            <img src='dionysus_name.png' alt='name_dionysus'/>
                         </Link>
                     </li>
                     <li>

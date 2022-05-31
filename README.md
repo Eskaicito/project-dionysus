@@ -11,7 +11,6 @@ El proyecto Dionysus es un e-commmerce inspirado en la estética del vaporwave y
 
 <br>
 <br> 
-<br>
 
 # Getting Started with Create React App
 

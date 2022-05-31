@@ -8,6 +8,8 @@ const Home = () => {
                 <img style={{ position: "absolute", top:"290px", left:"550px",width: "40vw" }} src='../dionysus_98.png' alt='dionysus_home'></img>
                 <img style={{ position: "absolute", top:"230px", left:"10px",width: "30vw" }} src='../message_hello.png' alt='dionysus_home'></img>
                 <img style={{ position: "absolute", top:"340px", left:"10px",width: "30vw" }} src='../message_welcome.png' alt='dionysus_home'></img>
+                <img style={{ position: "absolute", top:"260px", right:"5px",width: "20vw", height:"60vh" }} src='../column_project.png' alt='dionysus_home'></img>
+                <img style={{ position: "absolute", top:"230px", right:"50px",width: "20vw", height:"60vh" }} src='../column_project.png' alt='dionysus_home'></img>
             </div>
             <Scanlines />
         </>

@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path= '/about' element={<About />} />
-          <Route exact path= '/products' element={<Products />}/>
-          <Route exact path= '/products/:id' element={<Detail />}/>
+          <Route exact path= '/products/:category' element={<Products />}/>
+          <Route exact path= '/product/:id' element={<Detail />}/>
           <Route exact path= '/gallery' element={<Gallery />}/>
           <Route exact path= '*' element={<NotFound />} />
         </Routes>

@@ -9,15 +9,15 @@ const Items = ({ image, desc, stock, id}) => {
     return (
         <>
             <Card style={{ backgroundColor: "transparent", color: "white" }}>
-                <CardContent>
+                <CardContent >
                     <div className='card-item'>
                         <div>
-                            <img src={`./${image}`} alt='card' />
+                            <img src={`../${image}`} alt='card' />
                         </div>
                         <ItemCount stock= {stock}/>
                         <span>{desc}</span>
                         <button>
-                            <Link to={`/products/${id}`}>Details</Link>
+                            <Link to={`/product/${id}`}>Details</Link>
                         </button>
                     </div>
                 </CardContent>

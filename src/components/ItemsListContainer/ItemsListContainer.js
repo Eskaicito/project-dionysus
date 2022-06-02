@@ -3,33 +3,44 @@ import ItemsList from '../Itemslist/ItemsList'
 import '@mui/material';
 import { Container } from "@mui/system";
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import products from '../../utils/ProductsMock';
 
-const ItemsListContainer = () =>{
+const ItemsListContainer = () => {
     const [productos, setProductos] = useState([])
+    const { category } = useParams();
+    
+    const filteredCategory = (array) => {
+        array.map( (item) => {
+            //eslint-disable-next-line
+            if (item.category == category) {
+                return setProductos(productos => [...productos, item])
+            }
+        })
+    }
+
     const getProductos = () => {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
                 resolve(products);
-            }, 2000);
         });
     }
+
+
     useEffect(() => {
         getProductos()
             .then((Response) => {
-                setProductos(Response)
+                setProductos([])
+                filteredCategory(Response)
             })
-            .catch((Error) => {
-                setProductos("error", Error)
-            });
-    }, []);
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [category]);
 
-    return(
+
+    return (
         <>
-        {console.log(productos)}
-        <Container>
-            <ItemsList productos = {productos}/>
-        </Container>
+            <Container>
+                <ItemsList title= {"Productos"}productos={productos} />
+            </Container>
         </>
     )
 }

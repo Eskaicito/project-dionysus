@@ -8,8 +8,7 @@ const ItemsList = ({productos}) => {
         <>
                 <Grid className='items-list' container>
                     {
-                        productos.map((producto) => {
-                            const {image, desc, id, stock} = producto;
+                        productos.map(({image, desc, id, stock}) => {
                             return (
                                 <Grid item md={3} key = {id}>
                                     <Items image={image} desc={desc} stock={stock} id={id} />

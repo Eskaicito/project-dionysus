@@ -1,7 +1,7 @@
 import "./ItemCount.css"
 import { useState } from "react";
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, setShowButton}) => {
     const [counter, setCounter] = useState(0)
     const addItem = () => {
         if (counter < stock) {
@@ -19,7 +19,7 @@ const ItemCount = ({stock}) => {
             <button onClick={substractItem}>-</button>
             <p>{counter}</p>
             <button onClick={addItem}>+</button>
-            <button>BUY</button>
+            <button onClick={() => setShowButton(true)}>ADD ITEMS</button>
         </div>
     )
 }

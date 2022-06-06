@@ -1,10 +1,9 @@
 import './Items.css'
 import '@mui/material'
 import { CardContent, Card} from '@mui/material'
-import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
-const Items = ({ image, desc, stock, id}) => {
+const Items = ({ image, desc, id}) => {
     
     return (
         <>
@@ -14,7 +13,6 @@ const Items = ({ image, desc, stock, id}) => {
                         <div>
                             <img src={`../${image}`} alt='card' />
                         </div>
-                        <ItemCount stock= {stock}/>
                         <span>{desc}</span>
                         <button>
                             <Link to={`/product/${id}`}>Details</Link>

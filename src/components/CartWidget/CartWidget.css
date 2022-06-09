@@ -8,3 +8,15 @@
 .cart img{
     width: 100%;
 }
+.container-cart{
+    color: rgb(0, 0, 0);
+    width: 20vw;
+}
+.cart-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-product img{
+    width: 10vw;
+}

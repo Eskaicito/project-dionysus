@@ -19,7 +19,7 @@ const ItemCount = ({stock, setShowButton}) => {
             <button onClick={substractItem}>-</button>
             <p>{counter}</p>
             <button onClick={addItem}>+</button>
-            <button onClick={() => setShowButton(true)}>ADD ITEMS</button>
+            <button onClick={() => setShowButton(true)}>END SHOPPING</button>
         </div>
     )
 }

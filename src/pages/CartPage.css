@@ -1,0 +1,49 @@
+.cart-item{
+    background-color: rgb(152, 147, 147, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin-top: 2rem;
+}
+.item-img{
+    width: 100%;
+    height: auto;
+}
+.item-img img{
+    width: 100%;
+}
+.item-name{
+    width: 100%;
+    height: auto;
+}
+.item-name p{
+    font-size: 1.5rem;
+    color: white;
+}
+.item-desc{
+    width: 100%;
+    height: auto;
+}
+.item-desc p{
+    color: white;
+}
+.item-button{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+.item-button button{
+    background-color: black;
+    color: white;
+}
+.button-continue{
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+.button-continue button{
+   background-color: black;
+   color: white;
+   text-transform: none;
+}

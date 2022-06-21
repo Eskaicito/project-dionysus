@@ -1,4 +1,4 @@
-.cart-item{
+.cart-item {
     background-color: rgb(152, 147, 147, 0.5);
     display: flex;
     justify-content: center;
@@ -6,44 +6,68 @@
     height: 20vh;
     margin-top: 2rem;
 }
-.item-img{
+
+.item-img {
     width: 100%;
     height: auto;
 }
-.item-img img{
+
+.item-img img {
     width: 100%;
 }
-.item-name{
+
+.item-name {
     width: 100%;
     height: auto;
 }
-.item-name p{
+
+.item-name p {
     font-size: 1.5rem;
     color: white;
 }
-.item-desc{
+
+.item-desc {
     width: 100%;
     height: auto;
 }
-.item-desc p{
+
+.item-desc p {
     color: white;
 }
-.item-button{
+
+.item-button {
     width: 100%;
     height: auto;
     margin-top: 1rem;
 }
-.item-button button{
+
+.item-button button {
     background-color: black;
     color: white;
 }
-.button-continue{
+
+.button-continue {
     width: 100%;
     height: auto;
     margin-top: 2rem;
 }
-.button-continue button{
-   background-color: black;
-   color: white;
-   text-transform: none;
+
+.button-continue button {
+    background-color: black;
+    color: white;
+    text-transform: none;
+}
+
+.form-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: end;
+}
+.form-content > button{
+    align-self: center;
+    margin-top: 10px;
+}
+.form-content > div{
+    margin-top: 10px;
 }

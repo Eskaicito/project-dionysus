@@ -62,7 +62,7 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }
 .form-content > button{
     align-self: center;

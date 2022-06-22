@@ -19,7 +19,7 @@ const NavBar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to={'/products/vaporwave'}>
+                        <Link to={'/products'}>
                             <button>Products</button>
                         </Link>
                     </li>

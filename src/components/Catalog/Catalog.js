@@ -3,16 +3,17 @@ import '@mui/material'
 import { CardContent, Card} from '@mui/material'
 import { Link } from 'react-router-dom'
 
-const Catalog = ({ image, desc, category}) => {
+const Catalog = ({ image, desc, title, category}) => {
     
     return (
         <>
-            <Card className='mixin-set-dom' style={{ backgroundColor: "transparent", color: "white" }}>
-                <CardContent data-augmented-ui="tl-2-clip-x br-2-clip-x" >
+            <Card style={{ backgroundColor: "transparent", color: "white" }}>
+                <CardContent  >
                     <div className='card-item'>
                         <div>
-                            <img src={`./${image}`} alt='card' />
+                            <img src={`../${image}`} alt='card' />
                         </div>
+                        <h1>{title}</h1>
                         <span>{desc}</span>
                         <button>
                             <Link to={`/products/${category}`}>Visit</Link>

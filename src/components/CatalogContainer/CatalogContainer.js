@@ -10,20 +10,19 @@ import db from '../../utils/firebaseConfig';
 const CatalogContainer = () =>{
     const [catalogs, setCatalogs] = useState([])
     
-    /*const filteredCategory = (array) => {
+    const filteredCategory = (array) => {
         array.map( (item) => {
             //eslint-disable-next-line
-            if (item.category == category) {
+            if (item) {
                 return setCatalogs(catalogs => [...catalogs, item])
             }
         })
-    }*/
+    }
     useEffect(() => {
         getProductsFirestore()
             .then((catalogs) => {
-                console.log("catalogs", catalogs)
                 setCatalogs([])
-                //filteredCategory(catalogs)
+                filteredCategory(catalogs)
             })
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

@@ -1,15 +1,17 @@
 import "./ItemCount.css"
-import { useState } from "react";
+import { useState, useContext} from "react";
+import CartContext from '../../context/CartContext';
 
-const ItemCount = ({stock, setShowButton}) => {
-    const [counter, setCounter] = useState(0)
+const ItemCount = ({stock, data}) => {
+    const [counter, setCounter] = useState(1)
+    const {addProductToCart} = useContext(CartContext)
     const addItem = () => {
         if (counter < stock) {
             setCounter(() => counter + 1);
         }
     };
     const substractItem = () => {
-        if (counter >= 1) {
+        if (counter >= 2) {
             setCounter(() => counter - 1);
         }
     }
@@ -19,7 +21,7 @@ const ItemCount = ({stock, setShowButton}) => {
             <button onClick={substractItem}>-</button>
             <p>{counter}</p>
             <button onClick={addItem}>+</button>
-            <button onClick={() => setShowButton(true)}>END SHOPPING</button>
+            <button onClick={() => addProductToCart(data, counter)  }>ADD ITEMS TO CART</button>
         </div>
     )
 }

@@ -9,13 +9,15 @@ const CartProvider = ({ children }) => {
         if(!inCart){
             console.log("se agrego", product)
             setCartListItems(cartListItems => [...cartListItems, product])
-
-        }
+            
+        }else{ 
         console.log("producto ya existente")
+        }
     }
     const data = {
         cartListItems,
-        addProductToCart
+        addProductToCart,
+
     }
 
     return (

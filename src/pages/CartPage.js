@@ -5,43 +5,43 @@ import CartContext from "../context/CartContext";
 import { Link } from 'react-router-dom'
 import Modal from "../components/Modal/Modal";
 import TextField from '@mui/material/TextField';
-import {addDoc, collection} from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import db from "../utils/firebaseConfig";
 
 const CartPage = () => {
     const { cartListItems } = useContext(CartContext)
     const [show, showItem] = useState(true)
     const [showModal, setShowModal] = useState(false);
-    const [formValue, setFormValue] = useState ({
+    const [formValue, setFormValue] = useState({
         name: '',
         phone: '',
         email: ''
     })
-    
+
     const [order, setOrder] = useState({
-        buyer:{},
-        items: cartListItems.map( (item) => {
-            return{
+        buyer: {},
+        items: cartListItems.map((item) => {
+            return {
                 id: item.id,
                 desc: item.desc,
                 cont: item.cont,
             }
-        } ),
+        }),
     })
     const [delivered, setDelivered] = useState()
 
-    const handleChange =(e) =>{
-        setFormValue({...formValue, [e.target.name]: e.target.value})
-    }
-    
-    const handleSubmit=(e) =>{
-        e.preventDefault()
-        console.log(formValue)
-        setOrder({...order, buyer: formValue})
-        saveOrder({...order, buyer: formValue})
+    const handleChange = (e) => {
+        setFormValue({ ...formValue, [e.target.name]: e.target.value })
     }
 
-    const saveOrder = async (newOrder) =>{
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(formValue)
+        setOrder({ ...order, buyer: formValue })
+        saveOrder({ ...order, buyer: formValue })
+    }
+
+    const saveOrder = async (newOrder) => {
         const orderFirebase = collection(db, "orders")
         const orderDoc = await addDoc(orderFirebase, newOrder)
         console.log("orden enviada: ", orderDoc)
@@ -51,11 +51,13 @@ const CartPage = () => {
 
     return (
         <>
-        {console.log("order", order)}
+            {console.log("order", order)}
             <h1 style={{ color: "white" }}>CART</h1>
             {show && cartListItems.map((item) => {
                 const { image, desc, cont, id } = item;
                 return (
+                    <>
+                    {console.log(item.counter)}
                     <div className='cart-item' key={id}>
                         <div className='item-img'>
                             <img src={`../${image}`} alt='symbolsoftruth' />
@@ -67,6 +69,7 @@ const CartPage = () => {
                             <p>{cont}</p>
                         </div>
                     </div>
+                    </>
                 )
             })}
             <div className="button-continue">
@@ -87,36 +90,36 @@ const CartPage = () => {
 
             <Modal title={"Your Data"} open={showModal} handleClose={() => setShowModal(false)}>
 
-            {delivered ? (
-                <h2>Order received. Your order ID is {delivered}</h2>
-            ) :(<form className="form-content" onSubmit={handleSubmit} >
-                    <TextField 
-                        id="outlined-basic" 
+                {delivered ? (
+                    <h2>Order received. Your order ID is {delivered}</h2>
+                ) : (<form className="form-content" onSubmit={handleSubmit} >
+                    <TextField
+                        id="outlined-basic"
                         name="name"
-                        label="Nombre y Apellido" 
+                        label="Nombre y Apellido"
                         variant="outlined"
-                        onChange={handleChange} 
+                        onChange={handleChange}
                         value={formValue.name}
-                   />
-                    <TextField 
-                        id="outlined-basic" 
+                    />
+                    <TextField
+                        id="outlined-basic"
                         name="phone"
-                        label="Telefono" 
+                        label="Telefono"
                         variant="outlined"
-                        onChange={handleChange} 
+                        onChange={handleChange}
                         value={formValue.phone}
                     />
-                    <TextField 
-                        id="outlined-basic" 
+                    <TextField
+                        id="outlined-basic"
                         name="email"
-                        label="Mail" 
+                        label="Mail"
                         variant="outlined"
-                        onChange={handleChange} 
-                        value={formValue.email} 
+                        onChange={handleChange}
+                        value={formValue.email}
                     />
                     <button type="submit">Enviar</button>
                 </form>
-        )}
+                )}
             </Modal>
             <Scanlines />
         </>

@@ -9,7 +9,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import db from "../utils/firebaseConfig";
 
 const CartPage = () => {
-    const { cartListItems } = useContext(CartContext)
+    const { cartListItems, quantity } = useContext(CartContext)
     const [show, showItem] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const [formValue, setFormValue] = useState({
@@ -27,6 +27,7 @@ const CartPage = () => {
                 cont: item.cont,
             }
         }),
+        quantity: quantity,
     })
     const [delivered, setDelivered] = useState()
 
@@ -57,18 +58,21 @@ const CartPage = () => {
                 const { image, desc, cont, id } = item;
                 return (
                     <>
-                    {console.log(item.counter)}
-                    <div className='cart-item' key={id}>
-                        <div className='item-img'>
-                            <img src={`../${image}`} alt='symbolsoftruth' />
+                        {console.log(item.counter)}
+                        <div className='cart-item' key={id}>
+                            <div className='item-img'>
+                                <img src={`../${image}`} alt='symbolsoftruth' />
+                            </div>
+                            <div className='item-name'>
+                                <p>{desc}</p>
+                            </div>
+                            <div className='item-desc'>
+                                <p>{cont}</p>
+                            </div>
+                            <div>
+                                <p>{quantity}</p>
+                            </div>
                         </div>
-                        <div className='item-name'>
-                            <p>{desc}</p>
-                        </div>
-                        <div className='item-desc'>
-                            <p>{cont}</p>
-                        </div>
-                    </div>
                     </>
                 )
             })}

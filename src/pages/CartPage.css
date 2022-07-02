@@ -34,6 +34,10 @@
 .item-desc p {
     color: white;
 }
+.item-quantity{
+    font-size: 1.5rem;
+    color: white;
+}
 
 .item-button {
     width: 100%;

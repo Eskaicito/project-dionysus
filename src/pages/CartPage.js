@@ -27,7 +27,6 @@ const CartPage = () => {
                 cont: item.cont,
             }
         }),
-        quantity: quantity,
     })
     const [delivered, setDelivered] = useState()
 
@@ -52,13 +51,11 @@ const CartPage = () => {
 
     return (
         <>
-            {console.log("order", order)}
             <h1 style={{ color: "white" }}>CART</h1>
             {show && cartListItems.map((item) => {
                 const { image, desc, cont, id } = item;
                 return (
                     <>
-                        {console.log(item.counter)}
                         <div className='cart-item' key={id}>
                             <div className='item-img'>
                                 <img src={`../${image}`} alt='symbolsoftruth' />
@@ -69,9 +66,18 @@ const CartPage = () => {
                             <div className='item-desc'>
                                 <p>{cont}</p>
                             </div>
-                            <div>
-                                <p>{quantity}</p>
-                            </div>
+                            {quantity.map((count, i) => {
+                                const lastIndex = quantity.length - 1;
+                                if (i === lastIndex) {
+                                    return (
+                                        <>
+                                            <div className="item-quantity" key={id}>
+                                                <p>{count}</p>
+                                            </div>
+                                        </>
+                                    )
+                                }
+                            })}
                         </div>
                     </>
                 )

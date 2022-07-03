@@ -31,7 +31,6 @@ const ItemsListContainer = () => {
     useEffect(() => {
         getProductsFirestore()
             .then((productos) => {
-                console.log("productos", productos)
                 setProductos([])
                 filteredCategory(productos)
             })

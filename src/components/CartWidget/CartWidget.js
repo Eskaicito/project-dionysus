@@ -17,7 +17,7 @@ const Cart = () => {
     return (
         <div className='cart'>
             <img src='../hermes_symbol.png' alt='commerce-symbol' onClick={handleClick}></img>
-            <Menu
+            <Menu 
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}
@@ -29,7 +29,7 @@ const Cart = () => {
                 <div className='container-cart' >
                     {cartListItems.length === 0 && (
                         <>
-                        <p>NOTHING HERE</p>
+                        <p>Such empty</p>
                         </>
                     )}
                     {cartListItems.map((item) => {
@@ -40,6 +40,12 @@ const Cart = () => {
                                 </div>
                                 <div >
                                     <span>{item.desc}</span>
+                                </div>
+                                <div >
+                                    <span>Total Quantity: {item.quantity}</span>
+                                </div>
+                                <div>
+                                    <span> Total Price: {item.priceSell}</span>
                                 </div>
                             </div>
                         )

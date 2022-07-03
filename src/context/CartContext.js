@@ -4,13 +4,15 @@ const CartContext = createContext()
 
 const CartProvider = ({ children }) => {
     const [cartListItems, setCartListItems] = useState([])
-    const [quantity, setQuantity] = useState([0])
-    const addProductToCart = (product, quantityProduct) => {
+    const [totalSellPrice, setTotalSellPrice] = useState(0)
+    const addProductToCart = (product, quantity) => {
         let inCart = cartListItems.find(cartItem => cartItem.id === product.id)
         if (!inCart) {
+            product["priceSell"] = quantity * product.price
+            product["quantity"] = quantity
             console.log("se agrego", product)
             setCartListItems(cartListItems => [...cartListItems, product])
-            setQuantity(quantity => [...quantity, quantityProduct])
+            setTotalSellPrice(totalSellPrice + product.priceSell)
         } else if(inCart) {
             console.log("producto ya existente")
         }
@@ -18,8 +20,7 @@ const CartProvider = ({ children }) => {
     const data = {
         cartListItems,
         addProductToCart,
-        quantity,
-        setQuantity
+        totalSellPrice
     }
 
     return (

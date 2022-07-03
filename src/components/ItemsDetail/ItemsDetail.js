@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 
 const ItemsDetail = ({ data }) => {
-    const [quantity, setQuantity] = useState(1)
     return (
         <>
             <Grid container>
@@ -22,7 +21,7 @@ const ItemsDetail = ({ data }) => {
                             <h3>Stock: {data.stock}</h3>
                             <p>{data.cont}</p>
                         </div>
-                        <ItemCount stock={data.stock} data={data} quantity={quantity} setQuantity={setQuantity}/>
+                        <ItemCount stock={data.stock} data={data} />
                         <Link to={`/cart`} ><button>GO TO CART</button></Link>
                     </div>
                 </Grid>

@@ -9,7 +9,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import db from "../utils/firebaseConfig";
 
 const CartPage = () => {
-    const { cartListItems, quantity } = useContext(CartContext)
+    const { cartListItems, totalSellPrice } = useContext(CartContext)
     const [show, showItem] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const [formValue, setFormValue] = useState({
@@ -25,6 +25,8 @@ const CartPage = () => {
                 id: item.id,
                 desc: item.desc,
                 cont: item.cont,
+                quantity: item.quantity,
+                price: item.priceSell
             }
         }),
     })
@@ -45,6 +47,7 @@ const CartPage = () => {
         const orderFirebase = collection(db, "orders")
         const orderDoc = await addDoc(orderFirebase, newOrder)
         console.log("orden enviada: ", orderDoc)
+        console.log("orden", order)
         setDelivered(orderDoc.id)
     }
 
@@ -53,7 +56,7 @@ const CartPage = () => {
         <>
             <h1 style={{ color: "white" }}>CART</h1>
             {show && cartListItems.map((item) => {
-                const { image, desc, cont, id } = item;
+                const { image, desc, cont, id, quantity,price, priceSell} = item;
                 return (
                     <>
                         <div className='cart-item' key={id}>
@@ -66,24 +69,33 @@ const CartPage = () => {
                             <div className='item-desc'>
                                 <p>{cont}</p>
                             </div>
-                            {quantity.map((count, i) => {
-                                const lastIndex = quantity.length - 1;
-                                if (i === lastIndex) {
-                                    return (
-                                        <>
-                                            <div className="item-quantity" key={id}>
-                                                <p>{count}</p>
-                                            </div>
-                                        </>
-                                    )
-                                }
-                            })}
+                            <div className='item-desc'>
+                                <p>{quantity}</p>
+                            </div>
+                            <div className='item-desc'>
+                                <p>Product Price : {price}</p>
+                            </div>
+                            <div className='item-desc'>
+                                <p>Total Product Price: {priceSell}</p>
+                            </div>
                         </div>
                     </>
                 )
             })}
+            <div className='cart-footer'>
+                <div className='cart-checkout-details'>
+                    <div className='cart-checkout__subtotal'>
+                        <p>Subtotal</p>
+                        <span>$ {totalSellPrice}</span>
+                    </div>
+                    <div className='cart-checkout__total'>
+                        <p>Total</p>
+                        <span>$ {totalSellPrice}</span>
+                    </div>
+            </div>
+        </div>
             <div className="button-continue">
-                <Link to={'/products/vaporwave'}>
+                <Link to={'/products'}>
                     <button>
                         CONTINUE SHOPPING
                     </button>

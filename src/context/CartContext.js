@@ -17,10 +17,16 @@ const CartProvider = ({ children }) => {
             console.log("producto ya existente")
         }
     }
+    const cleanCartProducts = () => {
+        setTotalSellPrice(0)
+        setCartListItems([])
+    }
+
     const data = {
         cartListItems,
         addProductToCart,
-        totalSellPrice
+        totalSellPrice,
+        cleanCartProducts
     }
 
     return (

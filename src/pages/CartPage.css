@@ -42,7 +42,6 @@
 .item-button {
     width: 100%;
     height: auto;
-    margin-top: 1rem;
 }
 
 .item-button button {
@@ -53,7 +52,6 @@
 .button-continue {
     width: 100%;
     height: auto;
-    margin-top: 2rem;
 }
 
 .button-continue button {
@@ -74,4 +72,25 @@
 }
 .form-content > div{
     margin-top: 10px;
+}
+.cart-footer{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    background-color:rgba(85, 7, 73, 0.5);
+    margin-top: 2rem;
+}
+.details{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.details > div{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+align-items: center;
 }

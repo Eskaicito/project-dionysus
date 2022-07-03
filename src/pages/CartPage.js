@@ -9,7 +9,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import db from "../utils/firebaseConfig";
 
 const CartPage = () => {
-    const { cartListItems, totalSellPrice } = useContext(CartContext)
+    const { cartListItems, totalSellPrice, cleanCartProducts } = useContext(CartContext)
     const [show, showItem] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const [formValue, setFormValue] = useState({
@@ -56,7 +56,7 @@ const CartPage = () => {
         <>
             <h1 style={{ color: "white" }}>CART</h1>
             {show && cartListItems.map((item) => {
-                const { image, desc, cont, id, quantity,price, priceSell} = item;
+                const { image, desc, cont, id, quantity, price, priceSell } = item;
                 return (
                     <>
                         <div className='cart-item' key={id}>
@@ -83,31 +83,31 @@ const CartPage = () => {
                 )
             })}
             <div className='cart-footer'>
-                <div className='cart-checkout-details'>
-                    <div className='cart-checkout__subtotal'>
+                <div className='details'>
+                    <div className='subtotal'>
                         <p>Subtotal</p>
-                        <span>$ {totalSellPrice}</span>
+                        <span>${totalSellPrice}</span>
                     </div>
-                    <div className='cart-checkout__total'>
+                    <div className='total'>
                         <p>Total</p>
-                        <span>$ {totalSellPrice}</span>
+                        <span>${totalSellPrice}</span>
                     </div>
-            </div>
-        </div>
-            <div className="button-continue">
-                <Link to={'/products'}>
-                    <button>
-                        CONTINUE SHOPPING
-                    </button>
-                </Link>
-            </div>
-            <div className="item-button">
-                <button onClick={() => showItem(!show)}>
-                    {show === true ? 'DELETE CART' : 'UNDO DELETE'}
-                </button>
-            </div>
-            <div className="item-button">
-                <button onClick={() => setShowModal(true)}>END SHOPPING</button>
+                </div>
+                <div className="buttons">
+                    <div className="button-continue">
+                        <Link to={'/products'}>
+                            <button>
+                                CONTINUE SHOPPING
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="item-button">
+                        <button onClick={() => cleanCartProducts()}>DELETE CART</button>
+                    </div>
+                    <div className="item-button">
+                        <button onClick={() => setShowModal(true)}>END SHOPPING</button>
+                    </div>
+                </div>
             </div>
 
             <Modal title={"Your Data"} open={showModal} handleClose={() => setShowModal(false)}>

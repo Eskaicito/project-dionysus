@@ -9,7 +9,7 @@ import Gallery from './pages/Gallery';
 import Detail from './pages/Detail';
 import CartPage from './pages/CartPage';
 import { CartProvider } from './context/CartContext';
-import ProductsNav from './pages/ProductsNav';
+import Catalog from './pages/ProductsNav';
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/about' element={<About />} />
-            <Route exact path='/products' element={<ProductsNav />} />
+            <Route exact path='/catalog' element={<Catalog />} />
             <Route exact path='/products/:category' element={<Products />} />
             <Route exact path='/product/:id' element={<Detail />} />
             <Route exact path='/gallery' element={<Gallery />} />

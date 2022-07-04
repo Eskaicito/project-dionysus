@@ -1,4 +1,4 @@
-.bust {
+.detail-image {
     display: block;
     float: left;
 }
@@ -17,7 +17,7 @@
 
 }
 
-.bust img {
+.detail-image img {
     width: 100%;
     height: auto;
 }

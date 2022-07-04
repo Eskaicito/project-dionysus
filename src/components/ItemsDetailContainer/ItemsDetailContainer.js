@@ -1,4 +1,3 @@
-import './ItemsDetailContainer.css'
 import ItemsDetail from "../ItemsDetail/ItemsDetail";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/system";

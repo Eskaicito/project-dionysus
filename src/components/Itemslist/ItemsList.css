@@ -3,4 +3,5 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    background-color: rgba(65, 12, 116, 0.34);
 }

@@ -9,7 +9,7 @@ const ItemsDetail = ({ data }) => {
         <>
             <Grid container>
                 <Grid item md={6}>
-                    <div className='bust'>
+                    <div className='detail-image'>
                         <img src={`../${data.image}`} alt='symbolsoftruth'></img>
                     </div>
                 </Grid>
@@ -22,6 +22,7 @@ const ItemsDetail = ({ data }) => {
                         </div>
                         <ItemCount stock={data.stock} data={data} />
                         <Link to={`/cart`} ><button>FINISH SHOPPING</button></Link>
+                        <Link to={`/catalog`} ><button>GO BACK</button></Link>
                     </div>
                 </Grid>
             </Grid>

@@ -1,11 +1,9 @@
 import CatalogContainer from '../components/CatalogContainer/CatalogContainer';
-import Scanlines from '../components/Scanlines/Scanlines';
 const Catalog = () => {
     return (
 
         <>
-            <h1 style={{ color: "white" }}>Catalog</h1>
-            <Scanlines />
+            <h1 style={{ color: "white" }}>CATALOG</h1>
             <CatalogContainer />
         </>
     )

@@ -1,6 +1,5 @@
 import "./CartPage.css"
 import { useContext, useState } from "react"
-import Scanlines from "../components/Scanlines/Scanlines";
 import CartContext from "../context/CartContext";
 import { Link } from 'react-router-dom'
 import Modal from "../components/Modal/Modal";
@@ -66,9 +65,6 @@ const CartPage = () => {
                                 <p>{desc}</p>
                             </div>
                             <div className='item-desc'>
-                                <p>{cont}</p>
-                            </div>
-                            <div className='item-desc'>
                                 <p>{quantity}</p>
                             </div>
                             <div className='item-desc'>
@@ -94,7 +90,7 @@ const CartPage = () => {
                 </div>
                 <div className="buttons">
                     <div className="button-continue">
-                        <Link to={'/products'}>
+                        <Link to={'/catalog'}>
                             <button>
                                 CONTINUE SHOPPING
                             </button>
@@ -142,7 +138,6 @@ const CartPage = () => {
                 </form>
                 )}
             </Modal>
-            <Scanlines />
         </>
     )
 }

@@ -9,7 +9,7 @@ const Catalog = ({ image, desc, title, category}) => {
         <>
             <Card style={{ backgroundColor: "transparent", color: "white" }}>
                 <CardContent  >
-                    <div className='card-item'>
+                    <div className='catalog-item'>
                         <div>
                             <img src={`../${image}`} alt='card' />
                         </div>

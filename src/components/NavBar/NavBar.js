@@ -10,26 +10,28 @@ const NavBar = () => {
                 <ul>
                     <li>
                         <Link to={'/'}>
-                            <img src='dionysus_name.png' alt='name_dionysus'/>
+                            <img src='dionysus_name.png' alt='name_dionysus' />
                         </Link>
                     </li>
                     <li>
                         <Link to={'/about'}>
-                            <button>About</button>
+                            <button>ABOUT</button>
                         </Link>
                     </li>
                     <li>
                         <Link to={'/catalog'}>
-                            <button>Catalog</button>
+                            <button>CATALOG</button>
                         </Link>
                     </li>
                     <li>
                         <Link to={'/gallery'}>
-                            <button>Gallery</button>
+                            <button>GALLERY</button>
                         </Link>
                     </li>
+                    <li>
+                        <Cart />
+                    </li>
                 </ul>
-                <Cart />
             </nav>
         </div>
     )

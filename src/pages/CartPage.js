@@ -102,7 +102,7 @@ const CartPage = () => {
                         </Link>
                     </div>
                     <div className="item-button">
-                        <button onClick={() => cleanCartProducts()}>DELETE CART</button>
+                        <button onClick={cleanCartProducts()}>DELETE CART</button>
                     </div>
                     <div className="item-button">
                         <button onClick={() => setShowModal(true)}>END SHOPPING</button>

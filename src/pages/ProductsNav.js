@@ -3,7 +3,7 @@ const Catalog = () => {
     return (
 
         <>
-            <h1 style={{ color: "white" }}>CATALOG</h1>
+            <h1 style={{ color: "white", fontSize:'50px'}}>CATALOG</h1>
             <CatalogContainer />
         </>
     )

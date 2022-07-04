@@ -52,7 +52,7 @@ const CartPage = () => {
 
     return (
         <>
-            <h1 style={{ color: "white" }}>CART</h1>
+            <h1 style={{ color: "white", fontSize:'50px' }}>CART</h1>
             {cartListItems.map((item) => {
                 const { image, desc, id, quantity, price, priceSell } = item;
                 return (

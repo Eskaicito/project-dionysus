@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <>
-            <h1 style={{color: "white"}}>ABOUT THE PROJECT</h1>
+            <h1 style={{color: "white", fontSize:'50px'}}>ABOUT THE PROJECT</h1>
         </>
     )
 }

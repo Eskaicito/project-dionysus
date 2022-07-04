@@ -20,9 +20,10 @@ const ItemsDetailContainer = () => {
 
     useEffect(() => {
         getProduct()
-            .then((product) => {
-                setProduct(product)
-            })
+        .then((product) => {
+            setProduct(product)
+        })
+        // eslint-disable-next-line
     }, [])
 
     const getProduct = async () =>{

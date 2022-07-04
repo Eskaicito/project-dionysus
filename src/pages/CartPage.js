@@ -54,7 +54,7 @@ const CartPage = () => {
         <>
             <h1 style={{ color: "white" }}>CART</h1>
             {cartListItems.map((item) => {
-                const { image, desc, cont, id, quantity, price, priceSell } = item;
+                const { image, desc, id, quantity, price, priceSell } = item;
                 return (
                     <>
                         <div className='cart-item' key={id}>

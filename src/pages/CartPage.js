@@ -10,7 +10,6 @@ import db from "../utils/firebaseConfig";
 
 const CartPage = () => {
     const { cartListItems, totalSellPrice, cleanCartProducts } = useContext(CartContext)
-    const [show, showItem] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const [formValue, setFormValue] = useState({
         name: '',
@@ -55,7 +54,7 @@ const CartPage = () => {
     return (
         <>
             <h1 style={{ color: "white" }}>CART</h1>
-            {show && cartListItems.map((item) => {
+            {cartListItems.map((item) => {
                 const { image, desc, cont, id, quantity, price, priceSell } = item;
                 return (
                     <>
@@ -102,7 +101,7 @@ const CartPage = () => {
                         </Link>
                     </div>
                     <div className="item-button">
-                        <button onClick={cleanCartProducts()}>DELETE CART</button>
+                        <button onClick={()=> cleanCartProducts()}>DELETE CART</button>
                     </div>
                     <div className="item-button">
                         <button onClick={() => setShowModal(true)}>END SHOPPING</button>

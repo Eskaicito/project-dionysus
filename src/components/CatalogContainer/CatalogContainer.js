@@ -11,8 +11,8 @@ const CatalogContainer = () =>{
     const [catalogs, setCatalogs] = useState([])
     
     const filteredCategory = (array) => {
+        // eslint-disable-next-line
         array.map( (item) => {
-            //eslint-disable-next-line
             if (item) {
                 return setCatalogs(catalogs => [...catalogs, item])
             }
@@ -40,7 +40,7 @@ const CatalogContainer = () =>{
 
     return (
         <>
-            <Container>
+            <Container> 
                 <CatalogList title= {"Catalogs"} catalogs={catalogs} />
             </Container>
         </>

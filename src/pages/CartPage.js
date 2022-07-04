@@ -52,6 +52,7 @@ const CartPage = () => {
 
     return (
         <>
+        <div className="cartPage">
             <h1 style={{ color: "white", fontSize:'50px' }}>CART</h1>
             {cartListItems.map((item) => {
                 const { image, desc, id, quantity, price, priceSell } = item;
@@ -61,17 +62,20 @@ const CartPage = () => {
                             <div className='item-img'>
                                 <img src={`../${image}`} alt='symbolsoftruth' />
                             </div>
-                            <div className='item-name'>
+                            <div className='item-desc'>
                                 <p>{desc}</p>
                             </div>
-                            <div className='item-desc'>
-                                <p>{quantity}</p>
+                            <div className='item-quantity'>
+                                <p>Quantity:</p>
+                                <span>{quantity}</span>
                             </div>
-                            <div className='item-desc'>
-                                <p>Product Price : {price}</p>
+                            <div className='item-price'>
+                                <p>Price per unit:</p>
+                                <span>${price}</span>
                             </div>
-                            <div className='item-desc'>
-                                <p>Total Product Price: {priceSell}</p>
+                            <div className='item-price'>
+                                <p>Total:</p>
+                                <span>${priceSell}</span>
                             </div>
                         </div>
                     </>
@@ -80,11 +84,11 @@ const CartPage = () => {
             <div className='cart-footer'>
                 <div className='details'>
                     <div className='subtotal'>
-                        <p>Subtotal</p>
+                        <p> Cart Subtotal:</p>
                         <span>${totalSellPrice}</span>
                     </div>
                     <div className='total'>
-                        <p>Total</p>
+                        <p>Cart Total:</p>
                         <span>${totalSellPrice}</span>
                     </div>
                 </div>
@@ -104,6 +108,7 @@ const CartPage = () => {
                     </div>
                 </div>
             </div>
+        </div>
 
             <Modal title={"Your Data"} open={showModal} handleClose={() => setShowModal(false)}>
 

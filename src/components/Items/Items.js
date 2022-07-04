@@ -22,7 +22,7 @@ const Items = ({ image, desc, id, price}) => {
                         <h2>{desc}</h2>
                         <span>Price: ${price}</span>
                         <button>
-                            <Link to={`/product/${id}`}>Details</Link>
+                            <Link to={`/product/${id}`}>DETAILS</Link>
                         </button>
                     </div>
                 </CardContent>

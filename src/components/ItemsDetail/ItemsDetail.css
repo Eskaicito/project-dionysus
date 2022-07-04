@@ -1,6 +1,9 @@
 .detail-image {
     display: block;
     float: left;
+    background-color: rgba(0, 0, 0, 0.507);
+    margin: 20px;
+    border-radius: 600px;
 }
 
 .detailList {
@@ -10,6 +13,8 @@
     align-items: center;
     flex-flow: column;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.29);
+    margin: 20px;
 }
 
 .detail {

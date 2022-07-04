@@ -3,7 +3,7 @@ const Products = () => {
     return (
 
         <>
-        <h1 style={{color: "white"}}>Products</h1>
+        <h1 style={{color: "white"}}>PRODUCTS</h1>
             <ItemsListContainer />
         </>
     )

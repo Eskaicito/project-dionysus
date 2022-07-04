@@ -17,14 +17,18 @@ li{
     margin-right: 20px;
 }
 li button{
-    width: 200px;
+    width: 150px;
     height: 40px;
-    color: rgb(255, 255, 255);
     background-color: rgba(146, 7, 226, 0.386);
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 5px;
     box-shadow: 2px 5px 5px rgb(0, 0, 0);
     font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+li button a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 .mixin-set [data-augmented-ui] {
     width: 1400px;

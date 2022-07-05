@@ -25,7 +25,7 @@ const NavBar = () => {
                     </li>
                     <li>
                         <button>
-                            <Link to={'/gallery'} >GALLERY</Link>
+                            <Link to={'/contact'} >CONTACT</Link>
                         </button>
                     </li>
                     <li>

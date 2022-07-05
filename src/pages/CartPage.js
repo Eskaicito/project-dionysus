@@ -118,7 +118,7 @@ const CartPage = () => {
                     <TextField
                         id="outlined-basic"
                         name="name"
-                        label="Nombre y Apellido"
+                        label="Name and Surname"
                         variant="outlined"
                         onChange={handleChange}
                         value={formValue.name}
@@ -126,7 +126,7 @@ const CartPage = () => {
                     <TextField
                         id="outlined-basic"
                         name="phone"
-                        label="Telefono"
+                        label="Phone Number"
                         variant="outlined"
                         onChange={handleChange}
                         value={formValue.phone}

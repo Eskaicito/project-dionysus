@@ -11,6 +11,7 @@ import CartPage from './pages/CartPage';
 import { CartProvider } from './context/CartContext';
 import Catalog from './pages/ProductsNav';
 import Footer from './components/Footer/Footer';
+import Contact from './pages/Contact';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
             <Route exact path='/catalog' element={<Catalog />} />
             <Route exact path='/products/:category' element={<Products />} />
             <Route exact path='/product/:id' element={<Detail />} />
+            <Route exact path='/contact' element={<Contact />} />
             <Route exact path='/gallery' element={<Gallery />} />
             <Route exact path='/cart' element={<CartPage />} />
             <Route exact path='*' element={<NotFound />} />

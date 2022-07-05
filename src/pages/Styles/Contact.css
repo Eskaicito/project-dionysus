@@ -1,0 +1,38 @@
+.contact-text{
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-text-container{
+    width: 60%;
+}
+.contact-text p{
+    color: white;
+    width: 100%;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.form-contact{
+    background-color: rgba(80, 15, 140, 0.575);
+    border-radius: 30px;
+    width: 60%;
+    width: 50vh;
+}
+.form-contact fieldset{
+    border-radius: 30px;
+    color: white;
+}
+.form-contact label{
+    color: white;
+}
+.form-contact input{
+    color: white;
+}

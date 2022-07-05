@@ -1,9 +1,11 @@
 import './Styles/Contact.css'
 import { TextField } from '@mui/material'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Modal from '../components/Modal/Modal'
+import PacmanLoader from 'react-spinners/PacmanLoader';
 
 const Contact = () => {
+    const [loading, setLoading] = useState(false)
     const [showModal, setShowModal] = useState(false);
     const [formValue, setFormValue] = useState({
         name: '',
@@ -17,8 +19,24 @@ const Contact = () => {
     const handleChange = (e) => {
         setFormValue({ ...formValue, [e.target.name]: e.target.value })
     }
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
+    }, [])
     return (
         <>
+            { loading ?(
+                <div className='loader'>
+                <PacmanLoader 
+                loading={loading} 
+                size={50} 
+                color={'#F8E71C'}>
+                </PacmanLoader>
+                </div>
+            ) : (
+            <div>
             <h1 style={{ color: "white", fontSize: '50px' }}>CONTACT</h1>
             <div className='contact-text'>
                 <div className='contact-text-container'>
@@ -54,13 +72,15 @@ const Contact = () => {
                             value={formValue.message}
                         />
                     </fieldset>
-                    <button type="submit" onClick={() => {setShowModal(true)}}>SEND</button>
+                    <button type="submit" onClick={() => { setShowModal(true) }}>SEND</button>
                 </form>
             </div>
 
-            <Modal  title={"SUCCESS"} open={showModal} handleClose={() => setShowModal(false)}>
-            <p>YOUR DATA HAS BEEN RECEIVED</p>
-        </Modal>
+            < Modal title={"SUCCESS"} open={showModal} handleClose={() => setShowModal(false)}>
+                <p>YOUR DATA HAS BEEN RECEIVED</p>
+            </Modal>
+        </div>
+)}
         </>
     )
 }

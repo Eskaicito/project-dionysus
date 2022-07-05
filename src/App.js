@@ -12,6 +12,8 @@ import { CartProvider } from './context/CartContext';
 import Catalog from './pages/ProductsNav';
 import Footer from './components/Footer/Footer';
 import Contact from './pages/Contact';
+
+
 function App() {
   return (
     <div className="App">
@@ -31,7 +33,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
-      </CartProvider>
+      </CartProvider>)
     </div>
   );
 }

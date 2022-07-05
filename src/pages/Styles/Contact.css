@@ -1,3 +1,13 @@
+.loader{
+    background-color: rgba(46, 46, 46, 0.115);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
 .contact-text{
     width: 100%;
     font-size: 30px;

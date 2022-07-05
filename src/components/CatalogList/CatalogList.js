@@ -10,7 +10,7 @@ const CatalogList = ({ catalogs }) => {
                 {
                     catalogs.map(({ image, desc, category, id, title }) => {
                         return (
-                            <Grid item md={3} key={id}>
+                            <Grid item md={4} key={id}>
                                 <Catalog image={image} desc={desc} id={id} category={category} title={title}/>
                             </Grid>
                         )

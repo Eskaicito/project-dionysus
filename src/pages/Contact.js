@@ -1,8 +1,10 @@
 import './Styles/Contact.css'
 import { TextField } from '@mui/material'
 import { useState } from 'react'
+import Modal from '../components/Modal/Modal'
 
 const Contact = () => {
+    const [showModal, setShowModal] = useState(false);
     const [formValue, setFormValue] = useState({
         name: '',
         email: '',
@@ -52,9 +54,13 @@ const Contact = () => {
                             value={formValue.message}
                         />
                     </fieldset>
-                    <button type="submit">SEND</button>
+                    <button type="submit" onClick={() => {setShowModal(true)}}>SEND</button>
                 </form>
             </div>
+
+            <Modal  title={"SUCCESS"} open={showModal} handleClose={() => setShowModal(false)}>
+            <p>YOUR DATA HAS BEEN RECEIVED</p>
+        </Modal>
         </>
     )
 }

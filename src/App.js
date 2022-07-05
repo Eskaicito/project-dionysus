@@ -10,6 +10,7 @@ import Detail from './pages/Detail';
 import CartPage from './pages/CartPage';
 import { CartProvider } from './context/CartContext';
 import Catalog from './pages/ProductsNav';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
             <Route exact path='/cart' element={<CartPage />} />
             <Route exact path='*' element={<NotFound />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </div>

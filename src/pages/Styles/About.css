@@ -1,0 +1,32 @@
+.about-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-image img{
+    width: 100%;
+    padding: 100px;
+}
+.about-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background-color: rgba(0, 0, 0, 0.396);
+}
+.about-text div{
+    width: 70%;
+}
+.about-text q{
+    color: white;
+    font-size: small;
+    font-style: italic;;
+}
+.about-text p{
+    color: white;
+    font-size: 20px;
+}

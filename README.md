@@ -8,6 +8,7 @@ El proyecto Dionysus es un e-commmerce inspirado en la estética del vaporwave y
 - [Augmented UI](https://augmented-ui.com/https://github.com/propjockey/augmented-ui)
 - [Material UI](https://mui.com/)
 - [React Router DOM](https://www.npmjs.com/package/react-router-dom)
+- [React Spinners](https://www.davidhu.io/react-spinners/)
 
 <br>
 <br> 

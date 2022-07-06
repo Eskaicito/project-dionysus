@@ -139,7 +139,7 @@ const CartPage = () => {
                         onChange={handleChange}
                         value={formValue.email}
                     />
-                    <button type="submit">Enviar</button>
+                    <button type="submit">SEND</button>
                 </form>
                 )}
             </Modal>

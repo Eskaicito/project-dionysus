@@ -4,11 +4,13 @@ El proyecto Dionysus es un e-commmerce inspirado en la estética del vaporwave y
 
 ## Navegacion por la pagina
 
+https://user-images.githubusercontent.com/94655835/177640692-76bbca52-00e6-42c6-82f0-b071c893d629.mp4
+
+### En GIF
+https://drive.google.com/file/d/1kOBAlURViMMu8mpa-cyHzjblHE5lSRhU/view?usp=sharing
+
 
 ## Paquetes instalados
-
-
-https://user-images.githubusercontent.com/94655835/177640692-76bbca52-00e6-42c6-82f0-b071c893d629.mp4
 
 
 

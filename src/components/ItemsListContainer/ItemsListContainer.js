@@ -13,20 +13,13 @@ const ItemsListContainer = () => {
     const { category } = useParams();
     
     const filteredCategory = (array) => {
+        //eslint-disable-next-line
         array.map( (item) => {
-            //eslint-disable-next-line
-            if (item.category == category) {
+            if (item.category === category) {
                 return setProductos(productos => [...productos, item])
             }
         })
     }
-
-    /*const getProductos = () => {
-        return new Promise((resolve, reject) => {
-                resolve(products);
-        });
-    }*/
-
 
     useEffect(() => {
         getProductsFirestore()

@@ -19,10 +19,19 @@
 
 .detail {
     color: white;
-
+    
 }
 
 .detail-image img {
     width: 100%;
     height: auto;
+}
+.detail-button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.detail-button button{
+    font-family:'Roboto Mono', monospace;
+    background-color: black;
+    color: white;
 }

@@ -21,8 +21,12 @@ const ItemsDetail = ({ data }) => {
                             <p>{data.cont}</p>
                         </div>
                         <ItemCount stock={data.stock} data={data} />
-                        <Link to={`/cart`} ><button>FINISH SHOPPING</button></Link>
-                        <Link to={`/catalog`} ><button>GO BACK</button></Link>
+                        <div className='detail-button'>
+                            <Link to={`/cart`} ><button>FINISH SHOPPING</button></Link>
+                        </div>
+                        <div className='detail-button'>
+                            <Link to={`/catalog`} ><button>GO BACK</button></Link>
+                        </div>
                     </div>
                 </Grid>
             </Grid>

@@ -13,6 +13,7 @@
     margin-right: 10px;
 }
 .counter button{
+    font-family:'Roboto Mono', monospace;
     margin-left: 5px;
     margin-right: 5px;
     color: white;
